@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  owasp-zap:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: owasp-zap:latest
+    command: owasp-zap-local
+    ports:
+      - target: 8090
+        published: 8090
+        protocol: tcp
+        mode: host

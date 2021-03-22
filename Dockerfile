@@ -21,10 +21,10 @@ RUN wget -c https://github.com/zaproxy/zaproxy/releases/download/v${ZAP_VERSION}
  && chown -R seluser:seluser /opt/ZAP_${ZAP_VERSION}
 
 USER seluser
-WORKDIR $HOME
+WORKDIR /
 COPY entrypoint.sh entrypoint.sh
 COPY api-key.txt api-key.txt
 
 EXPOSE $ZAP_PORT
 
-ENTRYPOINT "/home/seluser/entrypoint.sh"
+ENTRYPOINT "/entrypoint.sh"
