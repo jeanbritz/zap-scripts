@@ -27,4 +27,4 @@ COPY api-key.txt api-key.txt
 
 EXPOSE $ZAP_PORT
 
-ENTRYPOINT "/bin/sh"
+ENTRYPOINT "/home/seluser/entrypoint.sh"
