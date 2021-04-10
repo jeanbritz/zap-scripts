@@ -98,6 +98,33 @@ Note: Not a complete list
 | `callback.port`                    | `Integer`             | 0              |
 | `callback.secure`                  | `Boolean`             | false          |
 
+#### Connection parameters [Source](https://github.com/zaproxy/zaproxy/blob/main/zap/src/main/java/org/parosproxy/paros/network/ConnectionParam.java)
+| Name                                                | Data type             | Default value  | 
+|  ---                                                | ----                  | ------         |
+| `connection.proxyChain.enabled`                     | `Boolean`             | false          |
+| `connection.proxyChain.hostName`                    | `String`              |                |
+| `connection.proxyChain.port`                        | `Integer`             | 8080           |
+| `connection.proxyChain.authEnabled`                 | `Boolean`             | false          |
+| `connection.proxyChain.realm`                       | `String`              |                |
+| `connection.proxyChain.userName`                    | `String`              |                |
+| `connection.proxyChain.password`                    | `String`              |                |
+| `connection.proxyChain.proxyChain.prompt`           | `Boolean`             | false          |
+| `connection.proxyChain.exclusions`                  | `String`              |                |
+| `connection.proxyChain.confirmRemoveExcludedDomain` | `Boolean`             | true           |
+| `connection.securityProtocolsEnabled.protocol`      | `List`                | SSLv3,TLSv1,TLSv1.1,TLSv1.2 |
+| `connection.dnsTtlSuccessfulQueries`                | `Integer`             |   30           |
+| `connection.timeoutInSecs`                          | `Integer`             | 20             |
+| `connection.singleCookieRequestHeader`              | `Boolean`             |   true         |
+| `connection.httpStateEnabled`                       | `Boolean`             | false          |
+| `connection.defaultUserAgent`                       | `Boolean`             | Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0 |
+| `connection.socksProxy.enabled`                     | `Boolean`             | false          |
+| `connection.socksProxy.dns`                         | `Boolean`             | ?              |
+| `connection.socksProxy.host`                        | `String`              | localhost      |
+| `connection.socksProxy.port`                        | `Integer`             | 1080           |
+| `connection.socksProxy.version`                     | `Integer`             | ?              |
+| `connection.socksProxy.username`                    | `String`              |                |
+| `connection.socksProxy.password`                    | `String`              |                |
+
 #### Database parameters [Source](https://github.com/zaproxy/zaproxy/blob/main/zap/src/main/java/org/parosproxy/paros/extension/option/DatabaseParam.java)
 | Name                          | Data type             | Default value | 
 |  ---                          | ----                  | ------        | 
@@ -109,16 +136,16 @@ Note: Not a complete list
 | `database.recoverylog`        | `Boolean`             | true          |
 
 #### Proxy parameters [Source](https://github.com/zaproxy/zaproxy/blob/main/zap/src/main/java/org/parosproxy/paros/core/proxy/ProxyParam.java)
-| Name                               | Data type             | Default value  | 
-|  ---                               | ----                  | ------         |
-| `proxy.ip`                         | `String`              | localhost      |
-| `proxy.port`                       | `Integer`             | 8080           |
-| `proxy.reverseProxy.use`           | `Integer`             | 0              |
-| `proxy.reverseProxy.ip`            | `String`              | localhost      |
-| `proxy.reverseProxy.httpPort`      | `Integer`             | 80             |
-| `proxy.reverseProxy.httpsPort`     | `Integer`             | 443            |
-| `proxy.behindnat`                  | `Boolean`             | false          |
-| `proxy.securityProtocolsEnabled.protocol`   | `String`     | SSLv3,TLSv1,TLSv1.1,TLSv1.2 |
-| `proxy.removeUnsupportedEncodings` | `Boolean`             | true           |
-| `proxy.decodeGzip`                 |`Boolean`             | true           |
+| Name                                        | Data type             | Default value  | 
+|  ---                                        | ----                  | ------         |
+| `proxy.ip`                                  | `String`              | localhost      |
+| `proxy.port`                                | `Integer`             | 8080           |
+| `proxy.reverseProxy.use`                    | `Integer`             | 0              |
+| `proxy.reverseProxy.ip`                     | `String`              | localhost      |
+| `proxy.reverseProxy.httpPort`               | `Integer`             | 80             |
+| `proxy.reverseProxy.httpsPort`              | `Integer`             | 443            |
+| `proxy.behindnat`                           | `Boolean`             | false          |
+| `proxy.securityProtocolsEnabled.protocol`   | `List`                | SSLv3,TLSv1,TLSv1.1,TLSv1.2 |
+| `proxy.removeUnsupportedEncodings`          | `Boolean`             | true           |
+| `proxy.decodeGzip`                          |`Boolean`              | true           |
 
