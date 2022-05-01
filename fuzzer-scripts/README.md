@@ -28,6 +28,6 @@ If the script is enabled it would appear on the dropdown. You only need to speci
 
 If it was configured correct you would get a Fuzz result as follows:
 
-![Fuzz Results](/images/fuzz-result-1.png)
+![Fuzz Results](/fuzzer-scripts/images/fuzz-result-1.png)
 
 Happy fuzzing :)
