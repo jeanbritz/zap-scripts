@@ -6,7 +6,7 @@ function processResult(utils, fuzzResult){
 	var regexToWatch = utils.getParameters().get("regexToWatch");
      var condition = new RegExp(regexToWatch).test(fuzzResult.getHttpMessage().getResponseBody());
 	if (condition) {
-		fuzzResult.addCustomState("State", "Message Contains " + regexToWatch);
+		fuzzResult.addCustomState("State", "HTTP Response contains " + regexToWatch);
 	}
 	
 	return true;
