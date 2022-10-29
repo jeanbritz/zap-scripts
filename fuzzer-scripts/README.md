@@ -4,12 +4,19 @@ This directory contains scripts which can be used with OWASP ZAP's Fuzzer
 
 ## Watching for specific response string from Fuzzer's results
 
-The script 'watch-fuzz-response.js` can be imported to OWASP ZAP.
 
-The use case of this script is when you are fuzzing a specific endpoint and want to watch if a specific string changes given a certain fuzz input.
+> Update 29-10-2022: The script has been updated to allow regex to be specified rather than a constant string. For now on it will only log a message in the `State` column if it matches the regex supplied in the `regexToWatch` parameter.
 
-For example, you are doing an username enumeration and want to check whether the error message changes depending on the username.
-In my case I had a scenario where if I supply an not existing username the error would be:
+
+The script `watch-fuzz-response.js` can be imported into OWASP ZAP.
+
+The use case of this script is when you are fuzzing a specific endpoint and want to watch if the response contains a specific string or matches a regex pattern given a certain fuzz input.
+
+### Example
+
+If you are doing an username enumeration and want to check whether the error message changes depending on the username.
+In my case I had a scenario where if I supply an non-existing username the error would be:
+
 ```
 Invalid username or password.
 ```
@@ -18,15 +25,17 @@ But for an existing username it would return the following error:
 Invalid username or password
 ```
 
-Given that my scenario is from a training exercise I am quite sure some variation would exist in the real world
+This scenario is however from a training exercise, but I am quite sure some variation would exist in the real world, being a developer myself I know it will.
 
-To install the script you can either create a new script on import it under the 'Fuzzer HTTP Processor` section
+### How to get the script to work
 
-Then when you want to fuzz, you click on the 'Message Processors' tab and click on 'Add...'.
+To install the script you can either create a new script or import it under the `Fuzzer HTTP Processor` section
 
-If the script is enabled it would appear on the dropdown. You only need to specify the 'stringToWatch'
+Then when you want to fuzz, you click on the `Message Processors` tab and click on `Add...`.
 
-If it was configured correct you would get a Fuzz result as follows:
+If the script is enabled it would appear on the dropdown. You only need to specify the `stringToWatch`
+
+If it was configured correctly you would get a Fuzz result as follows:
 
 ![Fuzz Results](/fuzzer-scripts/images/fuzz-result-1.png)
 
