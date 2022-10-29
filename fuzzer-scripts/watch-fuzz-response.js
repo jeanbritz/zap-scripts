@@ -4,11 +4,10 @@ function processMessage(utils, message) {
 
 function processResult(utils, fuzzResult){
 	var regexToWatch = utils.getParameters().get("regexToWatch");
-     var condition = new RegExp(regexToWatch).test(fuzzResult.getHttpMessage().getResponseBody());
+        var condition = new RegExp(regexToWatch).test(fuzzResult.getHttpMessage().getResponseBody());
 	if (condition) {
 		fuzzResult.addCustomState("State", "HTTP Response contains " + regexToWatch);
 	}
-	
 	return true;
 }
 
