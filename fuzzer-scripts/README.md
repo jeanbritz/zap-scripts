@@ -33,7 +33,7 @@ To install the script you can either create a new script or import it under the 
 
 Then when you want to fuzz, you click on the `Message Processors` tab and click on `Add...`.
 
-If the script is enabled it would appear on the dropdown. You only need to specify the `stringToWatch`
+If the script is enabled it would appear on the dropdown. You only need to specify the `regexToWatch`
 
 If it was configured correctly you would get a Fuzz result as follows:
 
