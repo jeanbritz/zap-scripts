@@ -1,14 +1,10 @@
 version: '3.7'
 
 services:
-  owasp-zap:
+  zaproxy:
     build:
       context: ./
       dockerfile: Dockerfile
-    image: owasp-zap:latest
-    command: owasp-zap-local
+    image: zaproxy:local
     ports:
-      - target: 8090
-        published: 8090
-        protocol: tcp
-        mode: host
+      - "8090:8090"
